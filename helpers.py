@@ -26,7 +26,7 @@ def show_total_missing_values(spark_df):
 @udf(StringType())    
 def convert_sas_date_to_datetime(sas):
     """
-    Accepts a SAS date and returns it as a datetime
+    Accept a SAS date and return it as a datetime
     """
     if sas:
         return (datetime(1960, 1, 1).date() + timedelta(sas)).isoformat()
